@@ -1,0 +1,161 @@
+
+.div-size
+{
+    height: 700px;
+}
+.text
+{
+    font-size: 30px;
+    font-family: 'Lato', sans-serif;
+    padding-top : 150px;
+}
+.text1
+{
+    font-size: 20px;
+    font-family : 'Lato', sans-serif;
+}
+.button1
+{
+    background-color : #f88020;
+    font-size: 15px;
+    color:white;
+}
+.button1:hover{
+  background-color: #f39422;
+}
+.second-div
+{
+  height: 500px;
+  background-color: #f88020;
+}
+.third-div
+{
+height: 500px;
+background-color: #94aa2a;
+
+}
+.forth-div
+{
+height: 500px;
+background-color:#45969b;
+position: absolute;
+z-index: 1000;
+}
+.fifth-div
+{
+  height: 500px;
+background-color:#c70d3a;
+}
+
+  .texts
+  {
+    color  :white;
+  }
+  .bg-blue
+  {
+    color: black;
+    background-color: white;
+  }
+.bg-white{
+   color: black;
+   background-color: yellow;
+}
+  .image
+  {
+    height: 500px;
+    width: 700px;
+    padding-left:150px;
+  }
+  .image1
+  {
+    height: 500px;
+    width: 700px;
+    margin-top  : 130px;
+    position:absolute;
+    z-index: 1;
+  }
+  .image2
+  {
+    height: 300px;
+    width: 500px;
+    margin-top : 280px;
+    margin-left: 100px;
+    position:absolute;
+    z-index: 2;
+  }
+  .nav-des
+  {
+    height: 70px;
+  }
+  .color
+  {
+    background-color: black;
+  }
+  .pen
+  {
+    width: 400px;
+    height: 200px;
+  }
+
+.top
+{
+  top : 100px;
+}
+  
+
+.head
+{
+  font-family: inherit;
+  font-size: 70px;
+}
+.cont-size
+{
+  height: 200px;
+  width: 200px;
+  background-image: url('https://www.blogger.com/about/img/sections/millions/millions-markers_2x.png');
+
+}
+.backimage
+{
+  padding-top : 180px;
+  width:600px;
+  position: absolute;
+}
+
+.textss
+{
+  position: relative;
+}
+.yellow-head
+{
+  font-size: 40px;
+  padding-top: 150px;
+  font-family: inherit;
+  padding-left: 60px;
+  padding-right: 20px;
+}
+.yellow-head1
+{
+  font-size: 20px;
+  padding-top: 10px;
+  font-family: inherit;
+  padding-left: 60px;
+}
+.yellow-head2
+{
+  font-size: 40px;
+  padding-top: 150px;
+  font-family: inherit;
+  padding-left: 130px;
+}
+.yellow-head3
+{
+  font-size: 20px;
+  padding-top: 10px;
+  font-family: inherit;
+  padding-left: 130px;
+}
+.x.disabled{
+ overflow-x: hidden;
+ max-width: 100%;
+}

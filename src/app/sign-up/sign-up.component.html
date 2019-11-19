@@ -1,0 +1,147 @@
+<div class="background1 container-fluid">
+  <div class="container-fluid text-right p-3">
+    <abbr title="Go to Homepage"
+      ><a href="/home"
+        ><i class="material-icons text-light icon">
+          home
+        </i></a
+      ></abbr
+    >
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="text-center text-light heading font-weight-bold">
+        Scholar
+      </div>
+      <div class="text-center  text-light signup">SIGN UP</div>
+    </div>
+    <div class="col-sm-8 pt-5">
+      <div class="container size bg-light" style="overflow-y: auto;">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="input-group mb-4 pt-5 pl-5 pr-5">
+            <input
+              type="text"
+              formControlName="name"
+              class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.name.errors }"
+              placeholder="name"
+              [(ngModel)]="name"
+            />
+            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+              <div *ngIf="f.name.errors.required">Name is required</div>
+            </div>
+          </div>
+  
+          <div class="input-group mb-4 mt-4  pl-5 pr-5">
+            <input
+              type="text"
+              formControlName="username"
+              class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
+              placeholder="username"
+              [(ngModel)]="username"
+            />
+            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+              <div *ngIf="f.username.errors.required">UserName is required</div>
+            </div>
+          </div>
+          <div class="input-group mb-4  pl-5 pr-5">
+            <input
+           
+              type="text"
+              formControlName="phone"
+              class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.phone.errors }"
+              placeholder="phone"
+              [(ngModel)]="phone"
+            />
+            <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+              <div *ngIf="f.phone.errors.required">Phone is required</div>
+              <div *ngIf="f.phone.errors.minlength || f.phone.errors.maxlength || f.phone.errors.pattern">
+                Enter valid phone number
+              </div> 
+              
+            </div>
+          </div>
+  
+          <div class="input-group mb-4  pl-5 pr-5">
+            <input
+              type="text"
+              formControlName="email"
+              class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+              placeholder="email"
+              [(ngModel)]="email"
+            />
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+              <div *ngIf="f.email.errors.required">Email is required</div>
+              <div *ngIf="f.email.errors.email">
+                Email must be a valid email address
+              </div>
+            </div>
+          </div>
+  
+          <div class="input-group mb-4  pl-5 pr-5">
+            <input
+              type="password"
+              formControlName="password"
+              class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+              placeholder="password"
+              [(ngModel)]="password"
+            />
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+              <div *ngIf="f.password.errors.required">Password is required</div>
+              <div *ngIf="f.password.errors.minlength">
+                Password must be at least 6 characters
+              </div>
+            </div>
+          </div>
+          <div class="input-group mb-4 mt-4  pl-5 pr-5">
+            <textarea
+              formControlName="bio"
+              class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.bio.errors }"
+              placeholder="bio"
+              [(ngModel)]="bio"
+            ></textarea>
+            <div *ngIf="submitted && f.bio.errors" class="invalid-feedback">
+              <div *ngIf="f.bio.errors.required">Bio is required</div>
+            </div>
+          </div>
+          <div class="form-group  pl-5 pr-5">
+            <button class="btn btn-sm rounded-0 btn4">Register</button>
+          </div>
+          <div class="border-top pt-3">
+            <div class="text-center text-muted">
+              Don't have an account?
+              <a href="/login">LogIn</a>
+            </div>
+          </div>
+        </form>
+  
+        <div
+          *ngIf="alert"
+          class="container alert alert-danger alert-dismissible text-center mt-2"
+        >
+          <a href="#" class="close" data-dismiss="alert" aria-label="close"
+            >&times;</a
+          >
+          <strong>Sign Up successful!</strong>
+        </div>
+  
+        <div
+          *ngIf="emailused"
+          class="container alert alert-danger alert-dismissible text-center mt-2"
+        >
+          <a href="#" class="close" data-dismiss="alert" aria-label="close"
+            >&times;</a
+          >
+          <strong>Email or username already in use!</strong>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>

@@ -1,0 +1,121 @@
+<div class="x">
+  <div class="color sticky-top" id="nav">
+    <nav class="navbar navbar-expand-md p-3 sticky-top">
+      <!-- Brand -->
+      <a class="navbar-brand " href="/home">
+        <span class="text-light">Scholar</span></a
+      >
+  
+      <!-- Toggler/collapsibe Button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mr-3">
+            <a *ngIf="!checkLogin()" class="nav-link" href="/signup"
+              ><div class="d-flex">
+                <div><i class="pr-1 material-icons texts"> person </i></div>
+                <div class="texts">SIGNUP</div>
+              </div></a
+            >
+          </li>
+          <li class="nav-item mr-3">
+            <a class="nav-link texts" *ngIf="!checkLogin()" href="/login"
+              >LOGIN</a
+            >
+          </li>
+          <li class="nav-item mr-3">
+            <a
+              type="button"
+              class="btn btn-info rounded-0"
+              *ngIf="checkLogin()"
+              (click)="logout()"
+              ><span class="text-light">Logout</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  
+  <div class="container-fluid " id="body" onscroll="scrollfunc()">
+    <div
+      class="container-fluid div-size "
+      [style.background-color]="hasColor ? '#c70d3a' : '#45969b'"
+    >
+      <img
+        src="//lh3.googleusercontent.com/EVaQo9gv2ko6xNWFWPFO8DKv-3RqK8J4g0yDcI0P3-hmf-uLSsYOMvRGqicF=d"
+        class="backimage"
+      />
+      
+      <div class="textss">
+        <div class="text-center font-weight-bold text-light text">
+          Write your mind out, in the best way
+        </div>
+        <div class="text-center font-weight-bold pt-1 text-light text1">
+          Create your own style blogs
+        </div>
+  
+        <div class="d-flex justify-content-center pt-5">
+          <button class="btn button1" (click)="home()">CREATE YOUR BLOG</button>
+        </div>
+  
+        <div class="container contsize pt-5">
+          <div class="text-center text-light font-weight-bold head">
+            Welcome To Scholar
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container-fluid second-div">
+     <div class="row">
+       <div class="col-sm-6">
+        <img
+        src="//lh3.googleusercontent.com/lpnI6G9VekY80fLOIqhM09I-jDZJOPg32OHvPq3aLnmSAoKf_5Dt6chjBPvGug=d"
+        class="image1"
+      />
+      <img
+        src="//lh3.googleusercontent.com/F13JvZjM5cCjOttGTn7eJiqCW21EohcHoqhhoKzwvuJAY8QN0t9uOlgRE_PCug=d"
+        class="image2"
+      />
+       </div>
+       <div class="col-sm-4">
+        <div class="text-light yellow-head">Get your creativity out!</div>
+        <div class="text-light yellow-head1">
+         Create a beautiful blog that fits your style. Choose from a selection of easy-to-use templates – all with flexible layouts and hundreds of background images – or design something new.
+        </div>
+       </div>
+      
+     </div>
+    </div>
+  
+    <div class="container-fluid forth-div">
+     <div class="row">
+       <div class="col-sm-5">
+          <div class="text-light yellow-head2">Get your creativity out!</div>
+        <div class="text-light yellow-head3">
+         Create a beautiful blog that fits your style. Choose from a selection of easy-to-use templates – all with flexible layouts and hundreds of background images – or design something new.
+        </div>
+       </div>
+       <div class="col-sm-7">
+          <img
+        src="//lh3.googleusercontent.com/9cbUVdUGgINO5xuTvk_SxU2eiZPu1PtRFMi3JhSMvYO7AOQnPBVpALNJnb8P=d"
+        class="image"
+      />
+       </div>
+     </div>
+    </div>
+    <div class="container-fluid third-div"></div>
+  </div>
+  
+  
+</div>

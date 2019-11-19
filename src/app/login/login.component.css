@@ -1,0 +1,97 @@
+*{
+    overflow: hidden;
+}
+
+  .shift {
+    font-family: "Raleway", sans-serif;
+  
+  }
+  .sign
+  {
+    font-family: "Raleway", sans-serif;
+    color: #b22222;
+    font-size : 32px;
+  }
+  
+  .btn:hover {
+    color: #537d91;
+  }
+  
+.heading
+{
+    font-size:36px;
+}
+.wid
+{
+    width:0px;
+}
+
+.abc
+{
+    padding-left :210px;
+    padding-top : 150px;
+}
+.imgsize
+{
+    padding-top :100px;
+    height: 550px;
+    width : 550px;
+    margin-left : 0px;
+    margin-top : 0px;
+}
+.as1{
+padding-top : 50px;
+padding-bottom: 100px;
+}
+.btn4 {
+    height: 40px;
+    width : 200px;
+    background-color: #494b6b;
+    color: #ce2e6c;
+  }
+  .btn4:hover {
+    color: #121441;
+  }
+  .tesx
+  {
+      color: #ce2e6c;
+  }
+
+.color{
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+  .background1
+{
+  height: 850px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image  : url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4wLqICXymx8RDEM-2aWkmHGngHlG3w-DRONAhUVfyEG6pQSG8rQ&s");
+}
+.icon
+{
+  font-size: 35px;
+}
+.col-size
+{
+  margin-top : 100px;
+  margin-left: 200px;
+  height: 500px;
+  width  :500px;
+}
+.hello
+{
+  font-size: 30px;
+  font-family : 'Lato', sans-serif;
+}
+.texts
+{
+  font-size: 15px;
+  font-family : 'Lato', sans-serif;
+
+}
+.tes{
+  color:white;
+}

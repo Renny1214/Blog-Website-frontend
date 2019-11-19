@@ -1,0 +1,120 @@
+<div>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark p-3 sticky-top">
+    <!-- Brand -->
+    <a class="navbar-brand text-light" href="/home">Scholar</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#collapsibleNavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item mr-3">
+          <button
+            type="button"
+            class="btn btn-info rounded-0"
+            (click)="blogpage()"
+          >
+            + Add Blog
+          </button>
+        </li>
+        <li class="nav-item mr-3">
+          <button
+            type="button"
+            class="btn btn-info rounded-0"
+            (click)="logout()"
+          >
+            Logout
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container pb-5 pt-5">
+  <div class="container color">
+      <div
+      class="font-weight-bold text pt-5 text-capitalize"
+    >
+      {{ title }}
+    </div>
+    <div class="text-muted date pt-3">{{blogDescription}}</div>
+    <div class="text-muted date">Contributed By :- <span class="text-info text-capitalize">{{user}}</span></div>
+
+    <div class="text-muted date pb-3">{{ date | date: "mediumDate" }}
+    </div>
+    <div class="img container-fluid ">
+      <img [src]="image" />
+    </div>
+
+   
+    <div class="texts">
+      {{ content }}
+    </div>
+  </div>
+  <div class="container  d-flex mt-5">
+    <div (click)="likeBlog(blogId)" class="p-3">
+      <img
+        [src]="disliked"
+        class="img-fluid icon-size"
+        [id]="blogId"
+      />
+      <div class="text-muted">{{ likes }} Likes</div>
+    </div>
+  </div>
+
+<!--comment-->
+<div
+  class="container-fluid position-relative"
+  style="bottom: 0px;"
+>
+  <div class="container p-5">
+    <h1 class="display-5 border-bottom pb-2 font-weight-bold">Comments</h1>
+  <div class="container">
+    <div *ngFor="let i of comments">
+      <div class="border-bottom d-flex justify-content-between">
+        <div class="p-3">
+          <div>
+            <a href="/profile/{{i.id}}">{{ i.user.username }}</a>
+          </div>
+          <div>
+            {{ i.comment }}
+          </div>
+        </div>
+        <div *ngIf="superAccess" class="bg-simple text-center p-3 del" (click)="deleteComment(i.id)">Delete</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!--for adding a comment-->
+  <div class="container text-center">
+    <h1 class="container display-4">Your thoughts...</h1>
+    <div>
+      <textarea
+        class="text-area-edit textarea"
+        [(ngModel)]="comment"
+        [ngModelOptions]="{ standalone: true }"
+      ></textarea>
+    </div>
+    <button
+      type="button"
+      class="mt-2 btn btn-info rounded-0 p-2 btn-edit font-weight-bold text-center"
+      (click)="addAComment()"
+    >
+      Post
+    </button>
+  </div>
+</div>
+
+
+
+</div>

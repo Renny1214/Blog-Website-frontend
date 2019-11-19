@@ -1,0 +1,121 @@
+
+<div>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark p-3 sticky-top">
+    <!-- Brand -->
+    <a class="navbar-brand text-light" href="/home">Scholar</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#collapsibleNavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item mr-3">
+          <button
+            type="button"
+            class="btn btn-info rounded-0"
+            (click)="blogpage()"
+          >
+            +Add Blog
+          </button>
+        </li>
+        <li class="nav-item mr-3">
+          <button
+            type="button"
+            class="btn btn-info rounded-0"
+            (click)="logout()"
+          >
+            Logout
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container-fluid img-background">
+  <div class="row pt-5">
+    <div class="col-sm-6 p-5">
+      <div class="conatiner p-5">
+        <h1 class="display-4 orange-left-border pl-4">Followers</h1>
+        <div *ngFor="let i of followers" class="container-fluid mt-5">
+          <div
+            class="container-fluid d-flex mb-2 p-3 border rounded-lg bg-white justify-content-between"
+          >
+            <div>
+              <div>
+                <a href="/profile/{{ i.userWhoSentRequest.id }}">{{
+                  i.userWhoSentRequest.username
+                }}</a>
+              </div>
+              <div class="text-muted">
+                {{ i.userWhoSentRequest.name }}
+              </div>
+            </div>
+            <div>
+              <button
+                type="button"
+                class="btn btn-light pl-3 pr-3 rounded-circle"
+                (click)="removeFromFollowers(i.userWhoSentRequest.id)"
+              >
+                &times;
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        *ngIf="followers.length == 0"
+        class="container text-center p-5 font-weight-bold"
+      >
+        Your follow list is empty !!
+      </div>
+    </div>
+
+    <div class="col-sm-6 p-5">
+      <div class="conatiner p-5">
+        <h1 class="display-4 orange-left-border pl-4">Following</h1>
+        <div *ngFor="let i of following" class="container-fluid mt-5">
+          <div
+            class="container-fluid d-flex mb-2 p-3 border rounded-lg bg-white justify-content-between"
+          >
+            <div>
+              <div>
+                <a href="/profile/{{ i.userWhoReceiveRequest.id }}">{{
+                  i.userWhoReceiveRequest.username
+                }}</a>
+              </div>
+              <div class="text-muted">
+                {{ i.userWhoReceiveRequest.name }}
+              </div>
+            </div>
+            <div>
+              <button
+                type="button"
+                class="btn btn-light pl-3 pr-3 rounded-circle"
+                (click)="unFollow(i.userWhoReceiveRequest.id)"
+              >
+                &times;
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        *ngIf="following.length == 0"
+        class="container text-center p-5 font-weight-bold"
+      >
+        Your following list is empty !!
+      </div>
+    </div>
+  </div>
+</div>

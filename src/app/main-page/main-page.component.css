@@ -1,0 +1,60 @@
+.heading
+{
+    font-size: 28px;
+    font-family: inherit;
+}
+.category
+{
+    font-size: 16px;
+    font-family: inherit;
+}
+.title
+{
+    font-size: 25px;
+    font-family: inherit;
+    color:black;
+    text-decoration: none;
+}
+.descrip
+{
+    font-size: 18px;
+    font-family: inherit;
+}
+.title1
+{
+    font-size: 20px;
+    font-family: inherit;
+    color:black;
+    text-decoration: none;
+}
+.descrip1
+{
+    font-size: 15px;
+    font-family: inherit;
+}
+.sizeimg
+{
+    height: 200px;
+    width: 200px;
+}
+.categories
+{
+    cursor: pointer;
+    font-size: 18px;
+    color:#45969b;
+}
+.categories:hover{
+    color: black;
+}
+.title:hover{
+    color:#45969b;
+}
+.head{ 
+    font-family: inherit;
+    font-size: 28px;
+
+}
+.index
+{
+    font-size: 15px;
+}

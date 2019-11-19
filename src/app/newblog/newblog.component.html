@@ -1,0 +1,127 @@
+<div>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark p-3 sticky-top">
+    <!-- Brand -->
+    <a class="navbar-brand text-light" href="/home">Scholar</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#collapsibleNavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item mr-3">
+          <button
+            type="button"
+            class="btn btn-info rounded-0"
+            (click)="logout()"
+          >
+            Logout
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<div class="back">
+    <div
+    class=" container text-center font-weight-bold heading pt-5 mb-5 pb-3 pl-5 pr-5"
+  >
+    Lets create a wonderful blog!
+  </div>
+  <div class="container mt-5 ">
+    <form [formGroup]="registerForm" (ngSubmit)="sendData()">
+      <div class="row">
+        <div class="col-sm-3 ">
+          <div class="form-group ">
+            <input
+              type="text"
+              formControlName="title"
+              class="form-control rounded-0"
+              [ngClass]="{ 'is-invalid': submitted && f.title.errors }"
+              placeholder="Title"
+              [(ngModel)]="title"
+              
+            />
+            <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+              <div *ngIf="f.title.errors.required">Title is required</div>
+            </div>
+          </div>
+          <div class="form-group ">
+            <input
+              type="text"
+              formControlName="image"
+              class="form-control rounded-0"
+              [ngClass]="{ 'is-invalid': submitted && f.image.errors }"
+              placeholder="Image Url"
+              [(ngModel)]="image"
+            />
+            <div *ngIf="submitted && f.image.errors" class="invalid-feedback">
+              <div *ngIf="f.image.errors.required">Image Url is required</div>
+            </div>
+          </div>
+          <div class="form-group ">
+          <input
+              type="text"
+              formControlName="category"
+              class="form-control rounded-0"
+              [ngClass]="{ 'is-invalid': submitted && f.category.errors }"
+              placeholder="Category"
+              [(ngModel)]="category"
+            />
+            
+            <div *ngIf="submitted && f.category.errors" class="invalid-feedback">
+              <div *ngIf="f.category.errors.required">Category is required</div>
+            </div>
+          </div>
+          <div class="mb-2 d-flex justify-content-center"> 
+            <input type="checkbox"  
+            (click)="access=true"
+            [(ngModel)]="access"
+            >
+            Is Private?
+          </div>
+          <div class="form-group d-flex justify-content-center pt-5">
+            <button class="btn addbtn">Add Blog</button>
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="form-group ">
+            <input
+              type="text"
+              formControlName="blogDescription"
+              class="form-control rounded-0"
+              [ngClass]="{ 'is-invalid': submitted && f.blogDescription.errors }"
+              placeholder="Blog Description"
+              [(ngModel)]="blogDescription"
+            />
+            <div *ngIf="submitted && f.blogDescription.errors" class="invalid-feedback">
+              <div *ngIf="f.blogDescription.errors.required">Blog Description is required</div>
+            </div>
+          </div>
+          <div class="form-group mb-5">
+            <textarea
+              type="text"
+              formControlName="content"
+              class="form-control rounded-0"
+              [ngClass]="{ 'is-invalid': submitted && f.content.errors }"
+              placeholder="Content"
+              [(ngModel)]="content"
+            ></textarea>
+            <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+              <div *ngIf="f.content.errors.required">Content is required</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+</div>

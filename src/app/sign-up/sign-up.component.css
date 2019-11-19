@@ -1,0 +1,100 @@
+*{
+    overflow: hidden;
+}
+
+.images {
+    height: 60px;
+    width: 50px;
+    margin: 5px;
+    padding-bottom: 5px;
+  }
+  .shift {
+    font-family: "Raleway", sans-serif;
+    padding-left: 60px;
+    padding-top: 20px;
+  }
+  .sign
+  {
+    font-family: "Raleway", sans-serif;
+    color: #537d91;
+    font-size : 32px;
+  }
+  
+  .btn:hover {
+    color: #537d91;
+  }
+  
+.heading
+{
+    font-size:36px;
+}
+.wid
+{
+    width:0px;
+}
+
+.abc
+{
+    padding-left :150px;
+    padding-top : 100px;
+}
+.imgsize
+{
+    height: 650px;
+    width : 550px;
+    margin-left : 0px;
+    margin-top : 0px;
+}
+
+.btn4 {
+    height: 30px;
+    width : 500px;
+    background-color: #494b6b;
+    color: white;
+    margin-left : 30px;
+  }
+  .btn4:hover {
+    color: #373a6d;
+  
+  }
+  .tesx
+  {
+      color: #ce2e6c;
+  }
+
+
+
+  
+  .background1
+{
+  height: 850px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image  : url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7923ce24293983.570a1fd8e5da3.jpg");
+}
+
+.icon
+{
+  font-size: 35px;
+}
+.heading{
+  font-size: 60px;
+  font-family: "Raleway", sans-serif;
+}
+.signup
+{
+  font-size: 30px;
+  font-family: "Raleway", sans-serif;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 5px solid white;
+}
+.size{
+  height: 600px;
+  width: 700px;
+}

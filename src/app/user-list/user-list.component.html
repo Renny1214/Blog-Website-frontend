@@ -1,0 +1,66 @@
+<div>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark p-3 sticky-top">
+          <!-- Brand -->
+          <a class="navbar-brand text-light" href="/home">Scholar</a>
+      
+          <!-- Toggler/collapsibe Button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#collapsibleNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <!-- Navbar links -->
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item mr-3">
+                <button
+                  type="button"
+                  class="btn btn-info rounded-0"
+                  (click)="logout()"
+                >
+                  Logout
+                </button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      
+
+      <div class="container pt-5">
+
+        <div class="row pt-5 pb-5">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2 text-info head text-center">Name</div>
+            <div class="col-sm-3 text-info head text-center">UserName</div>
+            <div class="col-sm-4 text-info head text-center">Bio</div>
+            <div class="col-sm-2 text-info head text-center">Follow</div>
+
+        </div>
+         <div class="row pt-5 pb-5 border-bottom" *ngFor="let i of user; let ind = index">
+
+            <div class="col-sm-1 font text-center">{{ind+1}}</div>
+            <div class="col-sm-2 font text-capitalize text-center">{{i.name}}</div>
+            <a class="col-sm-3 font text-muted text-center"
+            href="/profile/{{i.id}}">{{i.username}}</a>
+            <div class="col-sm-4 font text-center">{{i.bio}}</div>
+            <div class="col-sm-2">
+                
+                    <div class="text-center btn1" *ngIf="!superAccess">
+                            <button
+                              type="button"
+                              class="btn btn-dark rounded-0 p-2 "
+                              style="width: 100px;"
+                              [id]="i.id"
+                              (click)="follow(i.id)"
+                            >
+                              Follow
+                            </button>
+                          </div>
+            </div>
+         </div>
+      </div>

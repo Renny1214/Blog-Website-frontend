@@ -1,0 +1,57 @@
+.header-top
+{
+    padding-top: 60px;
+}
+.bordered
+{
+    border-bottom : 1px solid white;
+}
+.cities 
+{
+    font-size:11px;
+    color:white;
+}
+.cities:hover{
+    color:#64b2cd;
+    cursor: pointer;
+}
+.last
+{
+    padding-bottom: 70px;
+}
+.icon
+{
+    padding-top: 25px;
+    padding-right: 50px;
+}
+.discover
+{
+    padding-right: 50px;
+    padding-top : 25px;
+    font-size:15px;
+    color:white;
+}
+.discover:hover{
+    color:#64b2cd;
+    cursor: pointer;
+}
+.discover1{
+    padding-right: 50px;
+    padding-top : 25px;
+    font-size: 11px;
+    color:white;
+}
+.discover2{
+    
+    padding-top : 25px;
+    font-size: 11px;
+    color:white;
+}
+.discover2:hover{
+    color  : #64b2cd;
+    cursor: pointer;
+}
+.discover1:hover{
+    color:#64b2cd;
+    cursor: pointer;
+}
